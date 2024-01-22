@@ -1,1 +1,54 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+section {
+    box-sizing: border-box;
+    border: 1px solid black;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    background-color: #ffcc00; /* Choose your color */
+    color: black; /* Adjust text color for readability */
+    position: relative;
+    padding: 5px;
+    text-align: right;
+}
+
+.section-content {
+    padding: 20px;
+}
+
+/* Desktop View */
+.desktop {
+    float: left;
+    width: 33.33%; /* Equal width for each section */
+}
+
+/* Tablet View */
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+    .desktop {
+        width: 50%; /* Two sections in the first row */
+    }
+    .desktop:nth-child(3) {
+        clear: both; /* Third section in the second row */
+    }
+}
+
+/* Mobile View */
+@media only screen and (max-width: 767px) {
+    .desktop {
+        width: 100%; /* Each section takes the entire row */
+        clear: both;
+    }
+}
 
